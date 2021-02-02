@@ -16,37 +16,5 @@ On the other hand, we'll price the implied volatility using market data. For the
 ***
  *each code is commented to make the user understand its functionnality* 
 
-#### 2. pricing data using *the my_pricing* functions:
- ```math
-
-\begin{equation}
-r S_{t} \frac{\partial C}{\partial S}+\frac{\partial C}{\partial t}+\frac{1}{2} \sigma^{2} S^{2} \frac{\partial^{2} C}{\partial S^{2}}-r C=0
-\end{equation}
-
-is a Partial Differential Equation (PDE) describing how the option value $V(S, t)$ depends on the stock price $S$ and time $t$.
-In equation above, $\sigma$ is the volatility of the underlying asset,and $r$ is the interest rate. Both $\sigma$ and $r$ are considered given, while $C$ is the quantity being computed (or approximated).
-
-The call using ***black scholes formula***:
-\begin{equation}
-	\mathrm C(\mathrm S,\mathrm t)= \mathrm N(\mathrm d_1)\mathrm S - \mathrm N(\mathrm d_2) \mathrm K \mathrm e^{-rt}
-	\label{eq:2}
-\end{equation}
-The put formula using ***Black scholes formula***:
-\begin{equation}
-	\mathrm P(\mathrm S,\mathrm t)= \mathrm -N(\mathrm -d_1)\mathrm S + \mathrm N(\mathrm -d_2) \mathrm K \mathrm e^{-rt}
-	\label{eq:3}
-\end{equation}  
-
-where  
-
-\begin{equation}
-	\mathrm d_1= \frac{1}{\sigma \sqrt{\mathrm t}} \left[\ln{\left(\frac{S}{K}\right)} + t\left(r + \frac{\sigma^2}{2} \right) \right]
-\end{equation}
-
-\begin{equation}
-	\mathrm d_2= \frac{1}{\sigma \sqrt{\mathrm t}} \left[\ln{\left(\frac{S}{K}\right)} + t\left(r - \frac{\sigma^2}{2} \right) \right]
-\end{equation} 
-***
-```
 
 
